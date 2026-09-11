@@ -1,0 +1,118 @@
+/* ============================================ */
+/* ЛАУНЧЕР (ВЫБОР МЕССЕНДЖЕРА)                   */
+/* ============================================ */
+
+.launcher {
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #f0f5fa, #dce5f0);
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.launcher h1 {
+    font-size: 36px;
+    color: #0d2f5e;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.launcher .subtitle {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 40px;
+    transition: color 0.3s;
+}
+
+.launcher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.launcher-card {
+    background: #f5f8fc;
+    border: 2px solid #b3c3d4;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: 0.3s;
+    display: block;
+    text-decoration: none;
+}
+
+.launcher-card:hover {
+    border-color: #0d2f5e;
+    background: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(13, 47, 94, 0.15);
+    text-decoration: none;
+}
+
+.launcher-icon {
+    font-size: 56px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.launcher-card h2 {
+    font-size: 22px;
+    color: #0d2f5e;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.launcher-card p {
+    font-size: 13px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+/* Тёмная тема для лаунчера */
+body.dark-theme .launcher {
+    background: linear-gradient(to bottom, #161b22, #0d1117);
+}
+
+body.dark-theme .launcher h1 {
+    color: #58a6ff;
+}
+
+body.dark-theme .launcher .subtitle {
+    color: #8b949e;
+}
+
+body.dark-theme .launcher-card {
+    background: #161b22;
+    border: 2px solid #30363d;
+}
+
+body.dark-theme .launcher-card:hover {
+    border-color: #58a6ff;
+    background: #1c2128;
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.15);
+}
+
+body.dark-theme .launcher-card h2 {
+    color: #58a6ff;
+}
+
+body.dark-theme .launcher-card p {
+    color: #8b949e;
+}
+
+/* Адаптив */
+@media (max-width: 640px) {
+    .launcher h1 {
+        font-size: 26px;
+    }
+    .launcher-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+    .launcher-icon {
+        font-size: 44px;
+    }
+}
