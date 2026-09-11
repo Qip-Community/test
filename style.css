@@ -1,5 +1,234 @@
 /* ============================================ */
-/* ЛАУНЧЕР (ВЫБОР МЕССЕНДЖЕРА)                   */
+/* БАЗОВЫЕ СТИЛИ                                */
+/* ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, 'Segoe UI', Verdana, sans-serif;
+    background: #dce5f0;
+    color: #1a1a1a;
+    font-size: 13px;
+    line-height: 1.5;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #003399;
+}
+
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* ============================================ */
+/* ШАПКА                                        */
+/* ============================================ */
+
+header {
+    background: linear-gradient(to bottom, #1a4b8c, #0d2f5e);
+    padding: 8px 0 6px 0;
+    border-bottom: 2px solid #ffcc00;
+    transition: background 0.3s;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: Tahoma, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav a {
+    margin-left: 18px;
+    color: #c0d8f0;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #ffcc00;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 2px;
+}
+
+.lang-toggle,
+.theme-toggle {
+    background: none;
+    border: 2px solid #ffcc00;
+    color: #fff;
+    padding: 2px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+.lang-toggle:hover,
+.theme-toggle:hover {
+    background: #ffcc00;
+    color: #0d2f5e;
+}
+
+/* ============================================ */
+/* ГЛАВНЫЙ ЭКРАН (HERO)                         */
+/* ============================================ */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 50px;
+    background: linear-gradient(to bottom, #f0f5fa, #dce5f0);
+    border-bottom: 1px solid #b3c3d4;
+    transition: background 0.3s;
+}
+
+.hero-icon {
+    font-size: 64px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #0d2f5e;
+    font-weight: 800;
+    font-family: Tahoma, sans-serif;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 0 #b3c3d4;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.hero .subtitle {
+    font-size: 22px;
+    color: #1a4b8c;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.hero p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 10px auto 30px;
+    color: #2a2a2a;
+    transition: color 0.3s;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ============================================ */
+/* КНОПКИ                                       */
+/* ============================================ */
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to bottom, #f5f9ff, #c0d8f0);
+    color: #0d2f5e;
+    padding: 10px 26px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #7a9ec4;
+    cursor: pointer;
+    font-family: Tahoma, sans-serif;
+    text-transform: uppercase;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(to bottom, #ffffff, #dce5f0);
+    border-color: #0d2f5e;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: linear-gradient(to bottom, #e8edf3, #c8d4e0);
+    border-color: #8da0b8;
+    color: #0d2f5e;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(to bottom, #f5f9ff, #dce5f0);
+    border-color: #0d2f5e;
+}
+
+/* ============================================ */
+/* СЕКЦИИ                                       */
+/* ============================================ */
+
+.about,
+.download-section {
+    padding: 35px 20px 30px;
+    border-top: 1px solid #b3c3d4;
+    background: #f5f8fc;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.about h2,
+.download-section h2 {
+    font-size: 20px;
+    color: #0d2f5e;
+    margin-bottom: 10px;
+    font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
+}
+
+.about p {
+    color: #2a2a2a;
+    font-size: 14px;
+    max-width: 700px;
+    transition: color 0.3s;
+}
+
+/* ============================================ */
+/* ЛАУНЧЕР                                      */
 /* ============================================ */
 
 .launcher {
@@ -71,7 +300,351 @@
     transition: color 0.3s;
 }
 
-/* Тёмная тема для лаунчера */
+/* ============================================ */
+/* СТРАНИЦЫ (DOWNLOAD, ABOUT, FAQ, ETC.)        */
+/* ============================================ */
+
+.download-page,
+.about-page,
+.guide-page,
+.news-page,
+.team-page,
+.reviews-page,
+.privacy-page,
+.faq-page,
+.blog-page,
+.blog-post,
+.links-page {
+    padding: 35px 20px 30px;
+    background: #f0f5fa;
+    transition: background 0.3s;
+}
+
+.download-page h1,
+.about-page h1,
+.guide-page h1,
+.news-page h1,
+.team-page h1,
+.reviews-page h1,
+.privacy-page h1,
+.faq-page h1,
+.blog-page h1,
+.blog-post h1,
+.links-page h1 {
+    font-size: 28px;
+    color: #0d2f5e;
+    font-family: Tahoma, sans-serif;
+    border-bottom: 2px solid #b3c3d4;
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.download-page .subtitle,
+.team-page .subtitle,
+.reviews-page .subtitle,
+.privacy-page .subtitle,
+.faq-page .subtitle,
+.blog-page .subtitle,
+.blog-post .post-date,
+.links-page .subtitle {
+    font-size: 14px;
+    color: #444;
+    margin-top: -4px;
+    margin-bottom: 22px;
+    transition: color 0.3s;
+}
+
+/* ============================================ */
+/* КАРТОЧКИ                                     */
+/* ============================================ */
+
+.platform-card {
+    background: #f5f8fc;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+    border: 1px solid #b3c3d4;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.platform-card h2 {
+    font-size: 16px;
+    color: #0d2f5e;
+    margin-bottom: 4px;
+    font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
+}
+
+.platform-card p {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.badge {
+    display: inline-block;
+    background: #c8d4e0;
+    color: #0d2f5e;
+    padding: 2px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    border: 1px solid #8da0b8;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.help-card {
+    border-color: #ffcc00;
+    background: #fffcf0;
+}
+
+/* ============================================ */
+/* ФИЧИ                                         */
+/* ============================================ */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 18px;
+}
+
+.feature-item {
+    flex: 1 1 160px;
+    background: #edf3f9;
+    padding: 16px 14px;
+    border: 1px solid #b3c3d4;
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.feature-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.feature-item h3 {
+    color: #0d2f5e;
+    font-size: 14px;
+    margin-bottom: 2px;
+    font-family: Tahoma, sans-serif;
+    transition: color 0.3s;
+}
+
+.feature-item p {
+    font-size: 12px;
+    color: #444;
+    transition: color 0.3s;
+}
+
+/* ============================================ */
+/* ВИДЖЕТ DISCORD                               */
+/* ============================================ */
+
+.discord-widget-section {
+    padding: 35px 20px 30px;
+    background: #f5f8fc;
+    border-top: 1px solid #b3c3d4;
+    border-bottom: 1px solid #b3c3d4;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.discord-widget {
+    text-align: center;
+}
+
+.discord-widget h3 {
+    font-size: 20px;
+    color: #0d2f5e;
+    font-family: Tahoma, sans-serif;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.discord-widget iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.discord-widget p {
+    margin-top: 10px;
+}
+
+.discord-widget p a {
+    font-weight: bold;
+    color: #0d2f5e;
+    transition: color 0.3s;
+}
+
+.discord-widget p a:hover {
+    color: #ff6600;
+}
+
+/* ============================================ */
+/* ПОДВАЛ                                       */
+/* ============================================ */
+
+footer {
+    background: linear-gradient(to bottom, #d0dce8, #b8c8d8);
+    padding: 18px 20px;
+    text-align: center;
+    border-top: 1px solid #7a9ec4;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+footer p {
+    color: #1a3a5a;
+    font-size: 11px;
+    max-width: 600px;
+    margin: 0 auto;
+    transition: color 0.3s;
+}
+
+.socials {
+    margin-top: 8px;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #0d2f5e;
+    font-size: 12px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* ============================================ */
+/* ТЁМНАЯ ТЕМА                                  */
+/* ============================================ */
+
+body.dark-theme {
+    background: #0d1117;
+    color: #c9d1d9;
+}
+
+body.dark-theme header {
+    background: linear-gradient(to bottom, #0d2f5e, #161b22);
+    border-bottom: 2px solid #ffcc00;
+}
+
+body.dark-theme nav a {
+    color: #8b949e;
+}
+
+body.dark-theme nav a:hover,
+body.dark-theme nav a.active {
+    color: #ffcc00;
+}
+
+body.dark-theme .lang-toggle,
+body.dark-theme .theme-toggle {
+    color: #fff;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(to bottom, #161b22, #0d1117);
+    border-bottom: 1px solid #30363d;
+}
+
+body.dark-theme .hero h1 {
+    color: #58a6ff;
+    text-shadow: 1px 1px 0 #30363d;
+}
+
+body.dark-theme .hero .subtitle {
+    color: #8b949e;
+}
+
+body.dark-theme .hero p {
+    color: #8b949e;
+}
+
+body.dark-theme .about,
+body.dark-theme .download-section {
+    background: #0d1117;
+    border-top: 1px solid #30363d;
+}
+
+body.dark-theme .about h2,
+body.dark-theme .download-section h2 {
+    color: #58a6ff;
+}
+
+body.dark-theme .about p {
+    color: #8b949e;
+}
+
+body.dark-theme .feature-item {
+    background: #161b22;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .feature-item h3 {
+    color: #58a6ff;
+}
+
+body.dark-theme .feature-item p {
+    color: #8b949e;
+}
+
+body.dark-theme .platform-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+}
+
+body.dark-theme .platform-card h2 {
+    color: #58a6ff;
+}
+
+body.dark-theme .platform-card p {
+    color: #8b949e;
+}
+
+body.dark-theme .help-card {
+    border-color: #ffcc00;
+    background: #1c1f26;
+}
+
+body.dark-theme .discord-widget-section {
+    background: #0d1117;
+    border-top: 1px solid #30363d;
+    border-bottom: 1px solid #30363d;
+}
+
+body.dark-theme .discord-widget h3 {
+    color: #58a6ff;
+}
+
+body.dark-theme .discord-widget p a {
+    color: #58a6ff;
+}
+
+body.dark-theme .discord-widget p a:hover {
+    color: #ffcc00;
+}
+
+body.dark-theme footer {
+    background: linear-gradient(to bottom, #161b22, #0d1117);
+    border-top: 1px solid #30363d;
+}
+
+body.dark-theme footer p {
+    color: #8b949e;
+}
+
+body.dark-theme .socials a {
+    color: #8b949e;
+}
+
+body.dark-theme .socials a:hover {
+    color: #ffcc00;
+}
+
 body.dark-theme .launcher {
     background: linear-gradient(to bottom, #161b22, #0d1117);
 }
@@ -103,8 +676,110 @@ body.dark-theme .launcher-card p {
     color: #8b949e;
 }
 
-/* Адаптив */
+body.dark-theme .download-page,
+body.dark-theme .about-page,
+body.dark-theme .guide-page,
+body.dark-theme .news-page,
+body.dark-theme .team-page,
+body.dark-theme .reviews-page,
+body.dark-theme .privacy-page,
+body.dark-theme .faq-page,
+body.dark-theme .blog-page,
+body.dark-theme .blog-post,
+body.dark-theme .links-page {
+    background: #0d1117;
+}
+
+body.dark-theme .download-page h1,
+body.dark-theme .about-page h1,
+body.dark-theme .guide-page h1,
+body.dark-theme .news-page h1,
+body.dark-theme .team-page h1,
+body.dark-theme .reviews-page h1,
+body.dark-theme .privacy-page h1,
+body.dark-theme .faq-page h1,
+body.dark-theme .blog-page h1,
+body.dark-theme .blog-post h1,
+body.dark-theme .links-page h1 {
+    color: #58a6ff;
+    border-bottom: 2px solid #30363d;
+}
+
+body.dark-theme .download-page .subtitle,
+body.dark-theme .team-page .subtitle,
+body.dark-theme .reviews-page .subtitle,
+body.dark-theme .privacy-page .subtitle,
+body.dark-theme .faq-page .subtitle,
+body.dark-theme .blog-page .subtitle,
+body.dark-theme .blog-post .post-date,
+body.dark-theme .links-page .subtitle {
+    color: #8b949e;
+}
+
+body.dark-theme .btn {
+    background: linear-gradient(to bottom, #1f6feb, #1a5fcc);
+    color: #ffffff;
+    border: 1px solid #1f6feb;
+}
+
+body.dark-theme .btn:hover {
+    background: linear-gradient(to bottom, #388bfd, #1f6feb);
+    border-color: #388bfd;
+}
+
+body.dark-theme .btn-secondary {
+    background: transparent;
+    color: #58a6ff;
+    border: 2px solid #58a6ff;
+}
+
+body.dark-theme .btn-secondary:hover {
+    background: #58a6ff;
+    color: #0d1117;
+}
+
+body.dark-theme .badge {
+    background: #30363d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+}
+
+/* ============================================ */
+/* АДАПТИВ                                      */
+/* ============================================ */
+
 @media (max-width: 640px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero .subtitle {
+        font-size: 18px;
+    }
+    .hero-icon {
+        font-size: 48px;
+    }
+    .header-flex {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    nav a {
+        margin: 0 10px 0 0;
+        font-size: 11px;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature-item {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 280px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
     .launcher h1 {
         font-size: 26px;
     }
@@ -114,5 +789,11 @@ body.dark-theme .launcher-card p {
     }
     .launcher-icon {
         font-size: 44px;
+    }
+    .lang-toggle,
+    .theme-toggle {
+        font-size: 10px;
+        padding: 1px 8px;
+        margin-left: 5px;
     }
 }
